@@ -23,8 +23,10 @@ namespace ConsoleForTesting
             string stateName = Console.ReadLine();
             try
             {
+                Console.WriteLine("Star of scraping at " + DateTime.Now.ToString());
                 communities = scraper.ScrapCommunities(stateName);
                 companies = scraper.ScrapCompanies(stateName);
+                Console.WriteLine("End of scraping at " + DateTime.Now.ToString());
             }
             catch (Exception e)
             {
